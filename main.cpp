@@ -1,12 +1,17 @@
 #include <iostream>
-#include "Matritza.h"
+#include "WorkerCollection.h"
 
 using namespace std;
 
 int main()
 {
-    Matritza matrix = Matritza(5, 5);
+    WorkerCollection wc(1);
+    Worker w, x;
 
-    cout << "Hello world!" << endl;
+    cout << wc.numberOfWorkers() << endl;
+    wc.addWorker(w);
+    cout << wc.numberOfWorkers() << endl;
+    wc.addWorker(x);
+    cout << wc.numberOfWorkers() << endl;
     return 0;
 }
